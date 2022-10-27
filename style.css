@@ -1,0 +1,36 @@
+.box {
+    width: 90%;
+    margin: 0 auto 1em auto;
+    border: 2px solid #000;
+    padding: 1em;
+    border-radius: 1em;
+    counter-increment: boxNum;
+}
+
+.box::before {
+    content: "Box: " counter(boxNum);
+}
+
+.item {
+    color: #f90;
+}
+
+.item:hover {
+    color: #000;
+    background-color: #f90;
+}
+
+.wrapper {
+    width: 50%;
+    margin: 0 auto 1em auto;
+    border: 1px solid #000;
+    padding: 0.5em;
+    background-color: #fff;
+    color: #000;
+}
+
+.item:hover .wrapper,
+.item:hover ~ .wrapper {
+    color: #fff;
+    background-color: #000;
+}
